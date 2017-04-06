@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap-4-override",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fernando Machado Bernardino <fernandombernardino@gmail.com>",
+  "license": "ISC"
+}
