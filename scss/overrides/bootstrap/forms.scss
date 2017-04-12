@@ -1,0 +1,102 @@
+// ------------------------------------
+// Textual form controls
+// ------------------------------------
+.form-control {
+  &:disabled,
+  &[readonly] {
+    border-color: $gray-light;
+  }
+
+  &:disabled {
+    border-color: $gray-light;
+  }
+
+  &:focus {
+    border-color: darken($gray-dark, 12%);
+  }
+
+  &::placeholder {
+    color: $input-color-placeholder;
+    opacity: 1;
+  }
+}
+
+.form-check-input {
+  &:only-child {
+    position: relative;
+  }
+}
+
+.form-check {
+  &.disabled {
+    .form-check-label {
+      color: $text-muted;
+      cursor: $cursor-disabled;
+    }
+  }
+}
+
+// ------------------------------------
+// Select option
+// ------------------------------------
+select.form-control {
+  color: $white;
+  background-color: #A3AFBA;
+  border-color: #A3AFBA;
+
+  &:focus {
+    color: $white;
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+  }
+
+  &:disabled {
+    color: #AAB0B5;
+    background-color: #D2DAE0;
+  }
+}
+
+// ------------------------------------
+// Radios and checkboxes
+// ------------------------------------
+input[type='radio'],
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  outline: none;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  border: 1px solid #53C99B;
+  
+  &:before {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: 50%;
+    margin-top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+  
+  &:checked:before {
+    background: #53C99B;
+  }
+  
+  &:disabled {
+    border-color: rgba(#53C99B, .5);
+    cursor: not-allowed;
+  }
+}
+
+input[type='radio'] { border-radius: 50%; }
+input[type='checkbox'] { border-radius: 3px; }
+// input[type='radio']:hover,
+// input[type='checkbox']:hover {}
+input[type='radio']:before { border-radius: 50%; }
+input[type='checkbox']:before { border-radius: 2px; }
