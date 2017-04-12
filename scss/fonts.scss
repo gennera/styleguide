@@ -1,0 +1,22 @@
+// ----------------------------------------
+// Neo Sans Bold
+// ----------------------------------------
+@include addFont('Neo Sans Bold', '../fonts/Neo_Sans_Bold/Neo_Sans_Bold.ttf', 'truetype', 700, bold);
+
+// ----------------------------------------
+// Raleway
+// ----------------------------------------
+@include addFont('Raleway', '../fonts/Raleway/Raleway-Regular.ttf', 'truetype', 400, normal);
+@include addFont('Raleway', '../fonts/Raleway/Raleway-Italic.ttf', 'truetype', 400, italic);
+@include addFont('Raleway', '../fonts/Raleway/Raleway-Bold.ttf', 'truetype', 700, bold);
+@include addFont('Raleway', '../fonts/Raleway/Raleway-BoldItalic.ttf', 'truetype', 700, italic);
+
+// ----------------------------------------
+// Source Sans Pro
+// ----------------------------------------
+@include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf', 'truetype', 400, normal);
+@include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf', 'truetype', 400, italic);
+@include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf', 'truetype', 700, normal);
+@include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-BoldItalic.ttf', 'truetype', 700, italic);
+@include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-Black.ttf', 'truetype', 900, normal);
+@include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-BlackItalic.ttf', 'truetype', 900, italic);
