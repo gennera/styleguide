@@ -1,7 +1,22 @@
+// ACADEMIC - START
+@mixin addFont($font-family, $source-file, $format, $font-weight, $font-style) {
+  @font-face {
+      font-family: $font-family;
+      src: url($source-file) format($format);
+      font-weight: $font-weight;
+      font-style: $font-style;
+  }
+}
 
+@import '../../fonts';
+// ACADEMIC - END
 
 @import 'mixins';
-
 @import 'variables';
 @import 'custom';
+@import 'reboot';
+@import 'type';
 @import 'buttons';
+@import 'forms';
+
+
