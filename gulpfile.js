@@ -14,5 +14,8 @@ gulp.task('sass', () => {
 });
 
 gulp.task('sass:watch', () => {
-    gulp.watch('./scss/**/*.scss', ['sass']);
+    gulp.watch([
+      './scss/**/*.scss',
+      './scss/overrides/bootstrap/**/*.scss'
+    ], ['sass']);
 });
