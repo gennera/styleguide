@@ -67,12 +67,12 @@ label.form-control-file-custom {
   &:before {
     position: relative;
     left: -2px;
-    top: -1px;
+    top: -3px;
     bottom: 0;
     content: '';
-    width: 65px;
-    height: 41px;
-    background: url('../images/upload-cloud@2x.png') left center no-repeat/contain;
+    width: 67px;
+    height: 43px;
+    background: url(../images/upload-cloud@2x.png) left center no-repeat/contain;
   }
 
   &.active {
