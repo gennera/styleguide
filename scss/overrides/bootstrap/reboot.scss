@@ -24,3 +24,63 @@ a {
     text-decoration: $link-hover-decoration;
   }
 }
+
+label {
+  font-family: "Raleway";
+  font-size: 0.81rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label.form-control-file-custom {
+  display: flex;
+  justify-content: space-between;
+
+  height: $custom-input-file-height;
+  width: 100%;
+  padding: 0 10px 0 0px;
+
+  line-height: $custom-input-file-height;
+
+  color: $gray-lighter;
+
+  border: 1px solid $gray;
+  border-radius: 4px;
+  cursor: pointer;
+
+  > span {
+    padding: 0;
+
+    &.title {
+      flex-grow: 1;
+      padding-left: 5px;
+      text-align: left;
+    }
+    &.size {
+      display: none;
+      text-align: right;
+    }
+  }
+
+  &:before {
+    position: relative;
+    left: -2px;
+    top: -1px;
+    bottom: 0;
+    content: '';
+    width: 65px;
+    height: 41px;
+    background: url('../images/upload-cloud@2x.png') left center no-repeat/contain;
+  }
+
+  &.active {
+    > span {
+      &.title { color: $gray-dark; font-weight: bold; }
+      &.size { color: $brand-primary; display: inline-flex }
+    }
+
+    &:before { background: url('../images/upload-cloud-active@2x.png') left center no-repeat/contain; }
+  }
+}

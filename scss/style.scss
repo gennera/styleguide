@@ -11,3 +11,18 @@ section {
   margin-top: 40px;
   margin-bottom: 20px;
 }
+
+.code-example {
+  position: relative;
+  border: .2rem solid #f7f7f9;
+  padding: 1.5rem;
+}
+
+.code-highlight {
+  background-color: #f7f7f9;
+  padding: 0 20px;
+
+  .hljs {
+    background-color: #f7f7f9 !important;
+  }
+}

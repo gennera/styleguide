@@ -13,203 +13,435 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-reboot.css" media="screen" charset="UTF-8">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap-override.css" media="screen" charset="UTF-8">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
     <link rel="stylesheet" href="css/style.css" media="screen" charset="UTF-8">
+
+    
+
+    
   </head>
   <body>
     <div class="container">
-      <section class="typography">
-        <div class="row">
-          <div class="col">
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Typography</h4>
-              </div>
-              <div class="card-block">
-                <h1>h1. Bootstrap heading</h1>
-                <h2>h2. Bootstrap heading</h2>
-                <h3>h3. Bootstrap heading</h3>
-                <h4>h4. Bootstrap heading</h4>
-                <h5>h5. Bootstrap heading</h5>
-                <h6>h6. Bootstrap heading</h6>
-                <p>Este é um parágrafo</p>
-              </div>
-            </div>
-          </div>
+      <section id="typography">
+        <h2>Typography - Headings</h2>
+        <div class="code-example">
+          <h1>h1. Bootstrap heading</h1>
+          <h2>h2. Bootstrap heading</h2>
+          <h3>h3. Bootstrap heading</h3>
+          <h4>h4. Bootstrap heading</h4>
+          <h5>h5. Bootstrap heading</h5>
+          <h6>h6. Bootstrap heading</h6>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &lt;h1&gt;h1. Bootstrap heading&lt;/h1&gt;
+              &lt;h2&gt;h2. Bootstrap heading&lt;/h2&gt;
+              &lt;h3&gt;h3. Bootstrap heading&lt;/h3&gt;
+              &lt;h4&gt;h4. Bootstrap heading&lt;/h4&gt;
+              &lt;h5&gt;h5. Bootstrap heading&lt;/h5&gt;
+              &lt;h6&gt;h6. Bootstrap heading&lt;/h6&gt;
+            </code>
+          </pre>
+        </div>
+        
+        <br>
+        <br>
+
+        <h2>Typography - Inline text elements</h2>
+        <div class="code-example">
+          <p>You can use the mark tag to <mark>highlight</mark> text.</p>
+          <p><del>This line of text is meant to be treated as deleted text.</del></p>
+          <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+          <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+          <p><u>This line of text will render as underlined</u></p>
+          <p><small>This line of text is meant to be treated as fine print.</small></p>
+          <p><strong>This line rendered as bold text.</strong></p>
+          <p><em>This line rendered as italicized text.</em></p>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &ltp&gt;You can use the mark tag to &ltmark&gt;highlight&lt/mark&gt; text.&lt/p&gt;
+              &ltp&gt;&ltdel&gt;This line of text is meant to be treated as deleted text.&lt/del&gt;&lt/p&gt;
+              &ltp&gt;&lts&gt;This line of text is meant to be treated as no longer accurate.&lt/s&gt;&lt/p&gt;
+              &ltp&gt;&ltins&gt;This line of text is meant to be treated as an addition to the document.&lt/ins&gt;&lt/p&gt;
+              &ltp&gt;&ltu&gt;This line of text will render as underlined&lt/u&gt;&lt/p&gt;
+              &ltp&gt;&ltsmall&gt;This line of text is meant to be treated as fine print.&lt/small&gt;&lt/p&gt;
+              &ltp&gt;&ltstrong&gt;This line rendered as bold text.&lt/strong&gt;&lt/p&gt;
+              &ltp&gt;&ltem&gt;This line rendered as italicized text.&lt/em&gt;&lt/p&gt;
+            </code>
+          </pre>
         </div>
       </section>
-
-
-
-
-
+      <section id="alerts">
+        <h2>Alerts</h2>
+        <div class="code-example">
+          <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Well done!</strong> You successfully read this important alert message.
+          </div>
+          <div class="alert alert-info alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+          </div>
+          <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Warning!</strong> Better check yourself, you're not looking too good.
+          </div>
+          <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>Oh snap!</strong> Change a few things up and try submitting again.
+          </div>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &lt;div class="alert alert-success alert-dismissible" role="alert"&gt;
+                &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;
+                  &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;strong&gt;Well done!&lt;/strong&gt; You successfully read this important alert message.
+              &lt;/div&gt;
+              &lt;div class="alert alert-info alert-dismissible" role="alert"&gt;
+                &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;
+                  &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;strong&gt;Heads up!&lt;/strong&gt; This alert needs your attention, but it's not super important.
+              &lt;/div&gt;
+              &lt;div class="alert alert-warning alert-dismissible" role="alert"&gt;
+                &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;
+                  &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;strong&gt;Warning!&lt;/strong&gt; Better check yourself, you're not looking too good.
+              &lt;/div&gt;
+              &lt;div class="alert alert-danger alert-dismissible" role="alert"&gt;
+                &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;
+                  &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                &lt;/button&gt;
+                &lt;strong&gt;Oh snap!&lt;/strong&gt; Change a few things up and try submitting again.
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
+      <section id="badges">
+        <h2>Badges</h2>
+        <div class="code-example">
+          <span class="badge badge-pill badge-default">Default</span>
+          <span class="badge badge-pill badge-primary">Primary</span>
+          <span class="badge badge-pill badge-success">Success</span>
+          <span class="badge badge-pill badge-info">Info</span>
+          <span class="badge badge-pill badge-warning">Warning</span>
+          <span class="badge badge-pill badge-danger">Danger</span>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &lt;span class="badge badge-pill badge-default"&gt;Default&lt;/span&gt;
+              &lt;span class="badge badge-pill badge-primary"&gt;Primary&lt;/span&gt;
+              &lt;span class="badge badge-pill badge-success"&gt;Success&lt;/span&gt;
+              &lt;span class="badge badge-pill badge-info"&gt;Info&lt;/span&gt;
+              &lt;span class="badge badge-pill badge-warning"&gt;Warning&lt;/span&gt;
+              &lt;span class="badge badge-pill badge-danger"&gt;Danger&lt;/span&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
       <section id="buttons">
-        <div class="row" style="margin-bottom: 40px;">
-          <div class="col">
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Buttons - Default</h4>
-              </div>
-              <div class="card-block">
-                <div class="row" style="margin-bottom: 20px;">
-                  <div class="col">
-                    <button type="button" class="btn btn-primary">Primary</button>
-                    <button type="button" class="btn btn-secondary">Secondary</button>
-                    <button type="button" class="btn btn-success">Success</button>
-                    <button type="button" class="btn btn-info">Info</button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <button type="button" class="btn btn-warning">Warning</button>
-                    <button type="button" class="btn btn-danger">Danger</button>
-                    <button type="button" class="btn btn-link">Link</button>
-                  </div>
-                </div>
-              </div>
+        <h2>Default Buttons</h2>
+        <div class="code-example">
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-secondary">Secondary</button>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col">
+              <button type="button" class="btn btn-success">Success</button>
+              <button type="button" class="btn btn-info">Info</button>
+              <button type="button" class="btn btn-warning">Warning</button>
+              <button type="button" class="btn btn-danger">Danger</button>
+              <button type="button" class="btn btn-link">Link</button>
             </div>
           </div>
         </div>
-        <div class="row" style="margin-bottom: 40px;">
-          <div class="col">
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Buttons - Outlined</h4>
-              </div>
-              <div class="card-block">
-                <div class="row" style="margin-bottom: 20px;">
-                  <div class="col">
-                    <button type="button" class="btn btn-outline-primary">Primary</button>
-                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                    <button type="button" class="btn btn-outline-success">Success</button>
-                    <button type="button" class="btn btn-outline-info">Info</button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <button type="button" class="btn btn-outline-warning">Warning</button>
-                    <button type="button" class="btn btn-outline-danger">Danger</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &lt;button type="button" class="btn btn-primary"&gt;Primary&lt;/button&gt;
+              &lt;button type="button" class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+              &lt;button type="button" class="btn btn-success"&gt;Success&lt;/button&gt;
+              &lt;button type="button" class="btn btn-info"&gt;Info&lt;/button&gt;
+              &lt;button type="button" class="btn btn-warning"&gt;Warning&lt;/button&gt;
+              &lt;button type="button" class="btn btn-danger"&gt;Danger&lt;/button&gt;
+              &lt;button type="button" class="btn btn-link"&gt;Link&lt;/button&gt;
+            </code>
+          </pre>
         </div>
-        <div class="row" style="margin-bottom: 40px;">
-          <div class="col">
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Buttons - Size</h4>
-              </div>
-              <div class="card-block">
-                <div class="row" style="margin-bottom: 20px;">
-                  <div class="col">
-                    <button type="button" class="btn btn-primary btn-lg">Large</button>
-                    <button type="button" class="btn btn-secondary btn-lg">Large</button>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <button type="button" class="btn btn-primary btn-sm">Small</button>
-                    <button type="button" class="btn btn-secondary btn-sm">Small</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-
-      <section id="form">
-        <div class="card">
-          <div class="card-header">
-            <h4 class="card-title">Forms</h4>
-          </div>
-          <div class="card-block">
-            <div class="row">
-              <div class="col">
-                <form>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" disabled>
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleSelect1">Example select</label>
-                    <select class="form-control" id="exampleSelect1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleSelect2">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleTextarea">Example textarea</label>
-                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">File input</label>
-                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                    <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
-                  </div>
-                  <fieldset class="form-group">
-                    <legend>Radio buttons</legend>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                        Option one is this and that&mdash;be sure to include why it's great
-                      </label>
-                    </div>
-                    <div class="form-check">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-                        Option two can be something else and selecting it will deselect option one
-                      </label>
-                    </div>
-                    <div class="form-check disabled">
-                    <label class="form-check-label">
-                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
-                        Option three is disabled
-                      </label>
-                    </div>
-                  </fieldset>
-                  <div class="form-check">
-                    <label class="form-check-label">
-                      <input type="checkbox" class="form-check-input">
-                      Check me out
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </section>
-
       
+        <br>
+        <br>
+
+        <h2>Outline Buttons</h2>
+        <div class="code-example">
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-outline-primary">Primary</button>
+              <button type="button" class="btn btn-outline-secondary">Secondary</button>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col">
+              <button type="button" class="btn btn-outline-success">Success</button>
+              <button type="button" class="btn btn-outline-info">Info</button>
+              <button type="button" class="btn btn-outline-warning">Warning</button>
+              <button type="button" class="btn btn-outline-danger">Danger</button>
+            </div>
+          </div>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &lt;button type="button" class="btn btn-outline-primary"&gt;Primary&lt;/button&gt;
+              &lt;button type="button" class="btn btn-outline-secondary"&gt;Secondary&lt;/button&gt;
+              &lt;button type="button" class="btn btn-outline-success"&gt;Success&lt;/button&gt;
+              &lt;button type="button" class="btn btn-outline-info"&gt;Info&lt;/button&gt;
+              &lt;button type="button" class="btn btn-outline-warning"&gt;Warning&lt;/button&gt;
+              &lt;button type="button" class="btn btn-outline-danger"&gt;Danger&lt;/button&gt;
+            </code>
+          </pre>
+        </div>
+
+        <br>
+        <br>
+
+        <h2>Buttons Size</h2>
+        <div class="code-example">
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-primary btn-lg">Large</button>
+              <button type="button" class="btn btn-secondary btn-lg">Large</button>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col">
+              <button type="button" class="btn btn-primary btn-sm">Small</button>
+              <button type="button" class="btn btn-secondary btn-sm">Small</button>
+            </div>
+          </div>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &lt;button type="button" class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;
+              &lt;button type="button" class="btn btn-secondary btn-lg"&gt;Large&lt;/button&gt;
+
+              &lt;button type="button" class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
+              &lt;button type="button" class="btn btn-secondary btn-sm"&gt;Small&lt;/button&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
+      <section id="form">
+        <h2>Forms</h2>
+        <div class="code-example">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" disabled>
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleSelect1">Example select</label>
+              <select class="form-control" id="exampleSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleSelect2">Example multiple select</label>
+              <select multiple class="form-control" id="exampleSelect2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="exampleTextarea">Example textarea</label>
+              <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+              <div>
+                <label for="exampleInputFile" class="form-control-file-custom">
+                  <span class="title">Adicionar arquivo...</span>
+                  <span class="size">3,42mb</span>
+                </label>
+                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                <!--<small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>-->
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputFile" class="form-control-file-custom active">
+                <span class="title">foto-perfil.png</span>
+                <span class="size">3,42mb</span>
+              </label>
+              <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+              <!--<small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>-->
+            </div>
+            <fieldset class="form-group">
+              <legend>Radio buttons</legend>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                  Option one is this and that&mdash;be sure to include why it's great
+                </label>
+              </div>
+              <div class="form-check">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                  Option two can be something else and selecting it will deselect option one
+                </label>
+              </div>
+              <div class="form-check disabled">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                  Option three is disabled
+                </label>
+              </div>
+            </fieldset>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input">
+                Check me out
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &lt;form&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="exampleInputEmail1"&gt;Email address&lt;/label&gt;
+                  &lt;input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" disabled&gt;
+                  &lt;small id="emailHelp" class="form-text text-muted"&gt;We'll never share your email with anyone else.&lt;/small&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="exampleInputPassword1"&gt;Password&lt;/label&gt;
+                  &lt;input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="exampleSelect1"&gt;Example select&lt;/label&gt;
+                  &lt;select class="form-control" id="exampleSelect1"&gt;
+                    &lt;option&gt;1&lt;/option&gt;
+                    &lt;option&gt;2&lt;/option&gt;
+                    &lt;option&gt;3&lt;/option&gt;
+                    &lt;option&gt;4&lt;/option&gt;
+                    &lt;option&gt;5&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="exampleSelect2"&gt;Example multiple select&lt;/label&gt;
+                  &lt;select multiple class="form-control" id="exampleSelect2"&gt;
+                    &lt;option&gt;1&lt;/option&gt;
+                    &lt;option&gt;2&lt;/option&gt;
+                    &lt;option&gt;3&lt;/option&gt;
+                    &lt;option&gt;4&lt;/option&gt;
+                    &lt;option&gt;5&lt;/option&gt;
+                  &lt;/select&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="exampleTextarea"&gt;Example textarea&lt;/label&gt;
+                  &lt;textarea class="form-control" id="exampleTextarea" rows="3"&gt;&lt;/textarea&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;div&gt;
+                    &lt;label for="exampleInputFile" class="form-control-file-custom"&gt;
+                      &lt;span class="title"&gt;Adicionar arquivo...&lt;/span&gt;
+                      &lt;span class="size"&gt;3,42mb&lt;/span&gt;
+                    &lt;/label&gt;
+                    &lt;input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp"&gt;
+                    &lt;!--&lt;small id="fileHelp" class="form-text text-muted"&gt;This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.&lt;/small&gt;--&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="form-group"&gt;
+                  &lt;label for="exampleInputFile" class="form-control-file-custom active"&gt;
+                    &lt;span class="title"&gt;foto-perfil.png&lt;/span&gt;
+                    &lt;span class="size"&gt;3,42mb&lt;/span&gt;
+                  &lt;/label&gt;
+                  &lt;input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp"&gt;
+                  &lt;!--&lt;small id="fileHelp" class="form-text text-muted"&gt;This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.&lt;/small&gt;--&gt;
+                &lt;/div&gt;
+                &lt;fieldset class="form-group"&gt;
+                  &lt;legend&gt;Radio buttons&lt;/legend&gt;
+                  &lt;div class="form-check"&gt;
+                    &lt;label class="form-check-label"&gt;
+                      &lt;input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+                      Option one is this and that&mdash;be sure to include why it's great
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-check"&gt;
+                  &lt;label class="form-check-label"&gt;
+                      &lt;input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+                      Option two can be something else and selecting it will deselect option one
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                  &lt;div class="form-check disabled"&gt;
+                  &lt;label class="form-check-label"&gt;
+                      &lt;input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled&gt;
+                      Option three is disabled
+                    &lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/fieldset&gt;
+                &lt;div class="form-check"&gt;
+                  &lt;label class="form-check-label"&gt;
+                    &lt;input type="checkbox" class="form-check-input"&gt;
+                    Check me out
+                  &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;button type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;
+              &lt;/form&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
     </div>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js" charset="UTF-8"></script>
     <script type="text/javascript" src="bower_components/tether/dist/js/tether.min.js" charset="UTF-8"></script>
     <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('pre code').each(function(i, e) {
+
+          var html = $(this).html();
+          var pattern = html.match(/\s*\n[\t\s]*/);
+          $(this).html(html.replace(new RegExp(pattern, "g"),'\n'));
+
+          hljs.highlightBlock(e);
+        }); 
+      });
+    </script>
   </body>
 </html>
