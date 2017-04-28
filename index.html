@@ -8,12 +8,15 @@
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="bower_components/material-design-icons/iconfont/material-icons.css" media="screen" charset="UTF-8">
+    <link rel="stylesheet" href="css/material-design-override.css" media="screen" charset="UTF-8">
+
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" media="screen" charset="UTF-8">
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-reboot.css" media="screen" charset="UTF-8">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap-override.css" media="screen" charset="UTF-8">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
+    
     <link rel="stylesheet" href="css/style.css" media="screen" charset="UTF-8">
 
     
@@ -248,6 +251,73 @@
 
               &lt;button type="button" class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
               &lt;button type="button" class="btn btn-secondary btn-sm"&gt;Small&lt;/button&gt;
+            </code>
+          </pre>
+        </div>
+
+        <br>
+        <br>
+
+        <h2>Custom Buttons</h2>
+        <div class="code-example">
+          <div class="row">
+            <div class="col">
+              <button type="button" class="btn btn-primary">
+                <i class="material-icons md-20 md-left">chevron_left</i>
+                Back
+              </button>
+              <button type="button" class="btn btn-outline-secondary">
+                <i class="material-icons md-20 md-right">chevron_right</i>
+                Forward
+              </button>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col">
+              <button type="button" class="btn btn-primary">
+                <i class="material-icons md-20 md-left">all_inclusive</i>
+              </button>
+              <button type="button" class="btn btn-outline-secondary">
+                <i class="material-icons md-20 md-left">all_inclusive</i>
+              </button>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col">
+              <button type="button" class="btn btn-primary btn-icon">
+                <i class="material-icons md-20 md-left">all_inclusive</i>
+              </button>
+              <button type="button" class="btn btn-outline-secondary btn-icon">
+                <i class="material-icons md-20 md-left">all_inclusive</i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &lt;button type="button" class="btn btn-primary"&gt;
+                &lt;i class="material-icons md-20 md-left"&gt;chevron_left&lt;/i&gt;
+                Back
+              &lt;/button&gt;
+              &lt;button type="button" class="btn btn-outline-secondary"&gt;
+                &lt;i class="material-icons md-20 md-right"&gt;chevron_right&lt;/i&gt;
+                Forward
+              &lt;/button&gt;
+
+              &lt;button type="button" class="btn btn-primary"&gt;
+                &lt;i class="material-icons md-20 md-left"&gt;all_inclusive&lt;/i&gt;
+              &lt;/button&gt;
+              &lt;button type="button" class="btn btn-outline-secondary"&gt;
+                &lt;i class="material-icons md-20 md-left"&gt;all_inclusive&lt;/i&gt;
+              &lt;/button&gt;
+
+              &lt;button type="button" class="btn btn-primary btn-icon"&gt;
+                &lt;i class="material-icons md-20 md-left"&gt;all_inclusive&lt;/i&gt;
+              &lt;/button&gt;
+              &lt;button type="button" class="btn btn-outline-secondary btn-icon"&gt;
+                &lt;i class="material-icons md-20 md-left"&gt;all_inclusive&lt;/i&gt;
+              &lt;/button&gt;
             </code>
           </pre>
         </div>
