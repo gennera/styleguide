@@ -1,0 +1,90 @@
+.card.academic-card {
+  flex-direction: row;
+  min-height: 200px;
+  margin-bottom: 30px;
+
+  .title { padding: 0; }
+
+  > .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 35px;
+    border-top-left-radius: $card-border-radius;
+    border-bottom-left-radius: $card-border-radius;
+    border-right: 1px solid $card-border-color;
+    background-color: #FBFBFB;
+    cursor: pointer;
+
+    > span.title {
+      text-align: left;
+      font-family: $font-family-raleway;
+      font-weight: bold;
+      color: $secondary;
+    }
+
+    > div.indicators {
+      display: flex;
+
+      > div.indicator {
+        display: flex;
+        flex-direction: column-reverse;
+
+        > .title { color: #9C9FAF; }
+        > .value {
+          font-family: $font-family-raleway;
+          font-weight: bold;
+          font-size: 1.87rem;
+          color: $primary;
+        }
+      }
+
+      > div.separator {
+        height: 50px;
+        margin: 0 15px;
+        align-self: center;
+        border-left: 1px solid $gray-light;
+      }
+    }
+  }
+
+  > .detail-section {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-top-right-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+    background-color: #FFFFFF;
+
+    > div.actionbar {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0px 10px;
+      border-bottom: 1px solid $card-border-color;
+      color: #737784;
+
+      > i {
+        padding: 10px 5px;
+        &:hover { cursor: pointer }
+      }
+    }
+
+    > div.detail {
+      display: flex;
+      flex: 1;
+      font-size: remFromPixel(15px);
+      color: #9C9FAF;
+
+      .no-data {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        padding: 35px;
+
+        i { color: $card-border-color; }
+      }
+    }
+  }
+}

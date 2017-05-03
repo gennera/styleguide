@@ -7,21 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" media="screen" charset="UTF-8">
+
     <link rel="stylesheet" href="bower_components/material-design-icons/iconfont/material-icons.css" media="screen" charset="UTF-8">
     <link rel="stylesheet" href="css/material-design-override.css" media="screen" charset="UTF-8">
-
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" media="screen" charset="UTF-8">
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-reboot.css" media="screen" charset="UTF-8">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" charset="UTF-8">
     <link rel="stylesheet" href="css/bootstrap-override.css" media="screen" charset="UTF-8">
+
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css">
-    
+
     <link rel="stylesheet" href="css/style.css" media="screen" charset="UTF-8">
-
-    
-
-    
   </head>
   <body>
     <div class="container">
@@ -228,7 +225,7 @@
         <br>
         <br>
 
-        <h2>Buttons Size</h2>
+        <h2>Size Buttons</h2>
         <div class="code-example">
           <div class="row">
             <div class="col">
@@ -495,6 +492,100 @@
           </pre>
         </div>
       </section>
+      <section id="cards">
+        <h2>Cards</h2>
+        <div class="code-example">
+          <div class="row">
+            <div class="col">
+              <div class="card">
+                <div class="card-block">
+                  This is some text within a card block.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              ...
+            </code>
+          </pre>
+        </div>
+
+        <br>
+        <br>
+
+        <h2>Academic Card</h2>
+        <div class="code-example">
+          <div class="row">
+            <div class="col">
+              <div class="card academic-card">
+                <div class="info-section">
+                  <span class="title">Ideal Ensino Fundamental</span>
+                  <div class="indicators">
+                    <div class="indicator">
+                      <span class="title">Cursos</span>
+                      <span class="value">5</span>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="indicator">
+                      <span class="title">Matriculados</span>
+                      <span class="value">2181</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="detail-section">
+                  <div class="actionbar">
+                    <i class="material-icons md-24">mode_edit</i>
+                    <i class="material-icons md-24">delete</i>
+                  </div>
+                  <div class="detail">
+                    <div class="no-data">
+                      <i class="material-icons md-48">mode_edit</i>
+                      <span>Conclua o preenchimento desta instituição ...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &lt;div class="card academic-card"&gt;
+                &lt;div class="info-section"&gt;
+                  &lt;span class="title"&gt;Ideal Ensino Fundamental&lt;/span&gt;
+                  &lt;div class="indicators"&gt;
+                    &lt;div class="indicator"&gt;
+                      &lt;span class="title"&gt;Cursos&lt;/span&gt;
+                      &lt;span class="value"&gt;5&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="separator"&gt;&lt;/div&gt;
+                    &lt;div class="indicator"&gt;
+                      &lt;span class="title"&gt;Matriculados&lt;/span&gt;
+                      &lt;span class="value"&gt;2181&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="detail-section"&gt;
+                  &lt;div class="actionbar"&gt;
+                    &lt;i class="material-icons md-24"&gt;mode_edit&lt;/i&gt;
+                    &lt;i class="material-icons md-24"&gt;delete&lt;/i&gt;
+                  &lt;/div&gt;
+                  &lt;div class="detail"&gt;
+                    &lt;div class="no-data"&gt;
+                      &lt;i class="material-icons md-48"&gt;mode_edit&lt;/i&gt;
+                      &lt;span&gt;Conclua o preenchimento desta instituição ...&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
     </div>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js" charset="UTF-8"></script>
@@ -504,11 +595,8 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('pre code').each(function(i, e) {
-
           var html = $(this).html();
-          var pattern = html.match(/\s*\n[\t\s]*/);
-          $(this).html(html.replace(new RegExp(pattern, "g"),'\n'));
-
+          $(this).html(html.replace(new RegExp(html.match(/\s*\n[\t\s]*/), 'g'),'\n'));
           hljs.highlightBlock(e);
         }); 
       });
