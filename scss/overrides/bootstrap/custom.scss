@@ -29,6 +29,7 @@
 @include addFont('Raleway', '../fonts/Raleway/Raleway-BoldItalic.ttf', 'truetype', 700, italic);
 
 // Source Sans Pro
+@include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-Light.ttf', 'truetype', 300, normal);
 @include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf', 'truetype', 400, normal);
 @include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-Italic.ttf', 'truetype', 400, italic);
 @include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf', 'truetype', 700, normal);
