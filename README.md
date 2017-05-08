@@ -29,3 +29,31 @@ gulp.task('override:bootstrap', () => {
 ```sh
 gulp override:bootstrap
 ```
+
+
+
+---
+
+# NEW!
+
+### 1 - Add to bower dependencies:
+```js
+"genneraapps-styleguide": "git@github.com:gennera/styleguide.git"
+```
+
+### 2 - Run this command line:
+```sh
+bower install
+```
+
+### 3 - ?
+```js
+```
+
+### 4 - ?
+```js
+```
+
+### 5 - ?
+```js
+```
