@@ -63,7 +63,23 @@ gulp.task('copy:css', function () {
     .on('error', console.error);
 });
 
-gulp.task('dist', ['clean', 'sass', 'copy:css'], () => {
+gulp.task('copy:fonts', function () {
+  const ROOT = `${process.cwd()}`;
+
+  return gulp.src(`${ROOT}/fonts/**/*.ttf`)
+    .pipe(gulp.dest(`${ROOT}/dist/fonts`))
+    .on('error', console.error);
+});
+
+gulp.task('copy:images', function () {
+  const ROOT = `${process.cwd()}`;
+
+  return gulp.src(`${ROOT}/images/*`)
+    .pipe(gulp.dest(`${ROOT}/dist/images`))
+    .on('error', console.error);
+});
+
+gulp.task('dist', ['clean', 'sass', 'copy:css', 'copy:fonts', 'copy:images'], () => {
   const ROOT = `${process.cwd()}`;
 
   return gulp.src([
@@ -71,7 +87,7 @@ gulp.task('dist', ['clean', 'sass', 'copy:css'], () => {
     `${ROOT}/css/bootstrap-override.css`
   ])
   .pipe(cleanCSS())
-  .pipe(rename({suffix: ".min"}))
+  .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest(`${ROOT}/dist/css/`))
   .on('error', console.error);
 });
