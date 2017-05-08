@@ -39,7 +39,7 @@ gulp override:bootstrap
 ### 1 - Add to bower dependencies:
 ```js
 "dependencies": {
-  "genneraapps-styleguide": "git@github.com:gennera/styleguide.git"
+  "genneraapps-styleguide": "git@github.com:gennera/styleguide.git#1.0.0"
 }
 ```
 
