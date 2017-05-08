@@ -38,22 +38,39 @@ gulp override:bootstrap
 
 ### 1 - Add to bower dependencies:
 ```js
-"genneraapps-styleguide": "git@github.com:gennera/styleguide.git"
+"dependencies": {
+  "genneraapps-styleguide": "git@github.com:gennera/styleguide.git"
+}
 ```
 
 ### 2 - Run this command line:
+##### PS: This command will install automatically 'jquery, font-awesome, material-design-icons and bootstrap', like a dependency.
 ```sh
 bower install
 ```
 
 ### 3 - ?
-```js
+```html
+<!-- Stylesheets -->
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" media="screen" charset="UTF-8">
+<link rel="stylesheet" href="bower_components/material-design-icons/iconfont/material-icons.css" media="screen" charset="UTF-8">
+<link rel="stylesheet" href="bower_components/genneraapps-styleguide/dist/css/material-design-override.css" media="screen" charset="UTF-8">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-reboot.css" media="screen" charset="UTF-8">
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" media="screen" charset="UTF-8">
+<link rel="stylesheet" href="bower_components/genneraapps-styleguide/dist/css/bootstrap-override.css" media="screen" charset="UTF-8">
+
+<!-- Scripts -->
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="bower_components/tether/dist/js/tether.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js" charset="UTF-8"></script>
 ```
 
 ### 4 - ?
 ```js
+...
 ```
 
 ### 5 - ?
 ```js
+...
 ```
