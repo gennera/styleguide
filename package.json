@@ -1,6 +1,6 @@
 {
   "name": "genneraapps-styleguide",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,13 +9,17 @@
   "author": "Fernando Machado Bernardino <fernandombernardino@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "highlight.js": "^9.10.0"
+  },
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^3.0.4",
+    "gulp-if": "^2.0.2",
     "gulp-minify-css": "^1.2.4",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-sass": "^3.1.0",
-    "highlight.js": "^9.10.0"
+    "run-sequence": "^1.2.2"
   }
 }
