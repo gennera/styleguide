@@ -4,21 +4,30 @@
 // ----------------------------------------
 // TODO: Colors
 // ----------------------------------------
-$red:       #F76963;
-$orange:    #F2B253;
-$green:     #8BCC52;
-$teal:      #67D4CC;
+$white:     #FFF !default;
+$black:     #000 !default;
+$red:       #F76963 !default;
+$orange:    #F2B253 !default;
+$green:     #8BCC52 !default;
+$teal:      #67D4CC !default;
 
-$primary:   $blue; // VIRTUAL
-$secondary: $gray-dark; // VIRTUAL
+$primary:   $blue !default;
+$secondary: $gray-dark !default;
+
+// Grayscale
+$gray-dark:     #2B2B2B !default;
+$gray:          #828E99 !default;
+$gray-light:    #CCD2D7 !default;
+$gray-lighter:  #CAD1D8 !default;
+$gray-lightest: #EDF0F2 !default;
 
 // Reassign color vars to semantic color scheme
-$brand-primary:             $primary;
-$brand-secondary:           $secondary; // VIRTUAL
-$brand-success:             $green;
-$brand-info:                $teal;
-$brand-warning:             $orange;
-$brand-danger:              $red;
+$brand-primary:     $primary !default;
+$brand-secondary:   $secondary !default;
+$brand-success:     $green !default;
+$brand-info:        $teal !default;
+$brand-warning:     $orange !default;
+$brand-danger:      $red !default;
 
 // ----------------------------------------------------------------------
 // TODO: Options
@@ -95,7 +104,7 @@ $component-active-bg:    $brand-primary;
 // ----------------------------------------------------------------------
 $btn-padding-y:                  0.5rem;
 $btn-padding-x:                  3.75rem;
-$btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075) !default;
+$btn-box-shadow:                 inset 0 1px 0 rgba($white,.15), 0 1px 1px rgba($black,.075);
 $btn-focus-box-shadow:           0 0 0 2px rgba($brand-primary, .25);
 
 $btn-primary-color:              $white;
@@ -122,7 +131,7 @@ $btn-danger-color:               $white;
 $btn-danger-bg:                  $brand-danger;
 $btn-danger-border:              $btn-danger-bg;
 
-$btn-link-disabled-color:        $gray-light !default;
+$btn-link-disabled-color:        $gray-light;
 $btn-padding-x-sm:               3.09rem;
 $btn-padding-y-sm:               .53rem;
 $btn-padding-x-lg:               5.46rem;

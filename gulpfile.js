@@ -45,10 +45,11 @@ gulp.task('override:material-design', () => {
 gulp.task('override:bootstrap', () => {
   const scss = `${ROOT}/scss/overrides/bootstrap`;
 
-  let custom = `@import "custom";\n@import "${scss}/custom.scss";`;
+  let custom = `@import "custom";`;
 
   if (CUSTOM_BOOTSTRAP_VARIABLES)
     custom += `\n@import "${CUSTOM_BOOTSTRAP_VARIABLES}";`;
+  custom += `\n@import "${scss}/custom.scss";`;
 
   return gulp.src(`${ROOT}/bower_components/bootstrap/scss/bootstrap.scss`)
     .pipe(replace(/@import "custom";/, custom))
@@ -104,9 +105,5 @@ gulp.task('dist', () => {
 module.exports = options => {
   ROOT = options.styleguidePath;
   CUSTOM_BOOTSTRAP_VARIABLES = options.bootstrap;
-
-  console.log(ROOT);
-  console.log(CUSTOM_BOOTSTRAP_VARIABLES);
-
   options.gulp.task('build:styleguide', () => gulp.start('dist'));
 };
