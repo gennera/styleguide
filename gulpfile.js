@@ -11,7 +11,7 @@ const gulpif = require('gulp-if');
 
 
 let ROOT = process.cwd();
-let CUSTOM_BOOTSTRAP_VARIABLES = undefined;
+let CUSTOM_BOOTSTRAP_VARIABLES = '';
 
 
 // ----------------------------------------
@@ -45,16 +45,19 @@ gulp.task('override:material-design', () => {
 gulp.task('override:bootstrap', () => {
   const scss = `${ROOT}/scss/overrides/bootstrap`;
 
+  let custom = `@import "custom";\n@import "${scss}/custom.scss";`;
+
+  if (CUSTOM_BOOTSTRAP_VARIABLES)
+    custom += `\n@import "${CUSTOM_BOOTSTRAP_VARIABLES}";`;
+
   return gulp.src(`${ROOT}/bower_components/bootstrap/scss/bootstrap.scss`)
-    .pipe(gulpif(CUSTOM_BOOTSTRAP_VARIABLES != undefined, replace(/@import "custom";/, `@import "custom";\n@import "${CUSTOM_BOOTSTRAP_VARIABLES}";`)))
-    .pipe(replace(/@import "custom";/, `@import "custom";\n@import "${scss}/custom.scss";`))
+    .pipe(replace(/@import "custom";/, custom))
     .pipe(replace(/@import "buttons";/, `@import "buttons";\n@import "${scss}/buttons.scss";`))
     .pipe(replace(/@import "forms";/, `@import "forms";\n@import "${scss}/forms.scss";`))
     .pipe(replace(/@import "card";/, `@import "card";\n@import "${scss}/card.scss";`))
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(rename('bootstrap-override.css'))
-    .pipe(gulp.dest(`${ROOT}/css`))
-    .on('error', console.error);
+    .pipe(gulp.dest(`${ROOT}/css`));
 });
 
 gulp.task('override:min', () => {
@@ -70,7 +73,7 @@ gulp.task('override:min', () => {
 
 gulp.task('sass', () => {
   return gulp.src(`${ROOT}/scss/style.scss`)
-    .pipe(sass())
+    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(`${ROOT}/css`))
     .on('error', console.log);
 });
@@ -101,6 +104,9 @@ gulp.task('dist', () => {
 module.exports = options => {
   ROOT = options.styleguidePath;
   CUSTOM_BOOTSTRAP_VARIABLES = options.bootstrap;
+
+  console.log(ROOT);
+  console.log(CUSTOM_BOOTSTRAP_VARIABLES);
 
   options.gulp.task('build:styleguide', () => gulp.start('dist'));
 };

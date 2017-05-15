@@ -1,3 +1,5 @@
+$custom-input-file-height: 40px;
+
 // ------------------------------------
 // Textual form controls
 // ------------------------------------
@@ -40,8 +42,8 @@ input[type='checkbox'] {
   height: 16px;
   margin-right: 5px;
   margin-bottom: -2px;
-  border: 1px solid #53C99B;
-  
+  border: 1px solid $brand-primary;
+
   &:before {
     content: '';
     display: block;
@@ -56,13 +58,13 @@ input[type='checkbox'] {
     -ms-transition: all .3s ease;
     transition: all .3s ease;
   }
-  
+
   &:checked:before {
-    background: #53C99B;
+    background: $brand-primary;
   }
-  
+
   &:disabled {
-    border-color: rgba(#53C99B, .5);
+    border-color: rgba($brand-primary, .5);
     cursor: not-allowed;
   }
 }

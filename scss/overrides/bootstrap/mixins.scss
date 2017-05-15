@@ -1,0 +1,15 @@
+@function remFromPixel($pixel) {
+  @return #{$pixel / 16px}rem;
+}
+
+// ----------------------------------------
+// Mixin to add fonts to bootstrap override
+// ----------------------------------------
+@mixin addFont($font-family, $source-file, $format, $font-weight, $font-style) {
+  @font-face {
+      font-family: $font-family;
+      src: url($source-file) format($format);
+      font-weight: $font-weight;
+      font-style: $font-style;
+  }
+}
