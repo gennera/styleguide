@@ -5,7 +5,7 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" media="screen" charset="UTF-8">
 
@@ -44,7 +44,7 @@
             </code>
           </pre>
         </div>
-        
+
         <br>
         <br>
 
@@ -188,7 +188,7 @@
             </code>
           </pre>
         </div>
-      
+
         <br>
         <br>
 
@@ -235,6 +235,12 @@
           </div>
           <div class="row" style="margin-top: 20px;">
             <div class="col">
+              <button type="button" class="btn btn-primary">Default</button>
+              <button type="button" class="btn btn-secondary">Default</button>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col">
               <button type="button" class="btn btn-primary btn-sm">Small</button>
               <button type="button" class="btn btn-secondary btn-sm">Small</button>
             </div>
@@ -245,6 +251,9 @@
             <code class="html">
               &lt;button type="button" class="btn btn-primary btn-lg"&gt;Large&lt;/button&gt;
               &lt;button type="button" class="btn btn-secondary btn-lg"&gt;Large&lt;/button&gt;
+
+              &lt;button type="button" class="btn btn-primary"&gt;Default&lt;/button&gt;
+              &lt;button type="button" class="btn btn-secondary"&gt;Default&lt;/button&gt;
 
               &lt;button type="button" class="btn btn-primary btn-sm"&gt;Small&lt;/button&gt;
               &lt;button type="button" class="btn btn-secondary btn-sm"&gt;Small&lt;/button&gt;
@@ -598,7 +607,7 @@
           var html = $(this).html();
           $(this).html(html.replace(new RegExp(html.match(/\s*\n[\t\s]*/), 'g'),'\n'));
           hljs.highlightBlock(e);
-        }); 
+        });
       });
     </script>
   </body>

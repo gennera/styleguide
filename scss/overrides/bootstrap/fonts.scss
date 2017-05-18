@@ -4,6 +4,8 @@
 // Raleway
 @include addFont('Raleway', '../fonts/Raleway/Raleway-Regular.ttf', 'truetype', 400, normal);
 @include addFont('Raleway', '../fonts/Raleway/Raleway-Italic.ttf', 'truetype', 400, italic);
+@include addFont('Raleway', '../fonts/Raleway/Raleway-SemiBold.ttf', 'truetype', 500, normal);
+@include addFont('Raleway', '../fonts/Raleway/Raleway-SemiBoldItalic.ttf', 'truetype', 500, italic);
 @include addFont('Raleway', '../fonts/Raleway/Raleway-Bold.ttf', 'truetype', 700, bold);
 @include addFont('Raleway', '../fonts/Raleway/Raleway-BoldItalic.ttf', 'truetype', 700, italic);
 

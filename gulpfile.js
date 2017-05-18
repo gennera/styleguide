@@ -1,6 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
+const install = require('gulp-install');
 const clean = require('gulp-clean');
 const sass = require('gulp-sass');
 const replace = require('gulp-replace');
@@ -9,10 +10,8 @@ const cleanCSS = require('gulp-clean-css');
 const runSequence = require('run-sequence');
 const gulpif = require('gulp-if');
 
-
 let ROOT = process.cwd();
 let CUSTOM_BOOTSTRAP_VARIABLES = '';
-
 
 // ----------------------------------------
 // Tasks
@@ -100,10 +99,16 @@ gulp.task('dist', () => {
   );
 });
 
+gulp.task('install', () => {
+  gulp.src([`${ROOT}/bower.json`, `${ROOT}/package.json`])
+    .pipe(install());
+});
 
 // Exporting task to use inside another gulpfile, like a dependency...
 module.exports = options => {
   ROOT = options.styleguidePath;
   CUSTOM_BOOTSTRAP_VARIABLES = options.bootstrap;
-  options.gulp.task('build:styleguide', () => gulp.start('dist'));
+
+  options.gulp.task('styleguide:install', () => gulp.start('install'));
+  options.gulp.task('styleguide:build', () => gulp.start('dist'));
 };
