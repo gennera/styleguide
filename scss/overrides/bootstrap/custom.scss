@@ -244,6 +244,21 @@ $badge-padding-y:             .25em;
 // ----------------------------------------------------------------------
 // TODO: Modals
 // ----------------------------------------------------------------------
+// Padding applied to the modal body
+$modal-inner-padding:         80px 100px 20px 100px;
+
+$modal-content-bg:               $white;
+$modal-content-border-color:     #A3AFBA;
+
+$modal-backdrop-bg:           $white;
+$modal-backdrop-opacity:      1;
+
+$modal-header-border-color:   $white;
+$modal-footer-border-color:   $white;
+
+// $modal-lg:                    800px;
+// $modal-md:                    500px;
+// $modal-sm:                    300px;
 
 // ----------------------------------------------------------------------
 // TODO: Alerts

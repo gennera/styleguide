@@ -3857,7 +3857,7 @@ button.close {
   flex-direction: column;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid #A3AFBA;
   border-radius: 0.3rem;
   outline: 0; }
 
@@ -3868,18 +3868,18 @@ button.close {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000; }
+  background-color: #fff; }
   .modal-backdrop.fade {
     opacity: 0; }
   .modal-backdrop.show {
-    opacity: 0.5; }
+    opacity: 1; }
 
 .modal-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px;
-  border-bottom: 1px solid #eceeef; }
+  border-bottom: 1px solid #fff; }
 
 .modal-title {
   margin-bottom: 0;
@@ -3888,14 +3888,14 @@ button.close {
 .modal-body {
   position: relative;
   flex: 1 1 auto;
-  padding: 15px; }
+  padding: 80px 100px 20px 100px; }
 
 .modal-footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 15px;
-  border-top: 1px solid #eceeef; }
+  padding: 80px 100px 20px 100px;
+  border-top: 1px solid #fff; }
   .modal-footer > :not(:first-child) {
     margin-left: .25rem; }
   .modal-footer > :not(:last-child) {
@@ -3918,6 +3918,36 @@ button.close {
 @media (min-width: 992px) {
   .modal-lg {
     max-width: 800px; } }
+
+.modal-dialog {
+  margin-top: 120px; }
+  .modal-dialog .modal-content {
+    border-top: none;
+    border-bottom: none;
+    border-radius: 0; }
+    .modal-dialog .modal-content .modal-header .modal-title {
+      color: #292b2c; }
+    .modal-dialog .modal-content .modal-header:before {
+      content: '';
+      width: 38px; }
+    .modal-dialog .modal-content .modal-header button.close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 38px;
+      width: 38px;
+      font-weight: 100;
+      font-size: 20px;
+      border: 1px solid #A3AFBA;
+      border-radius: 50%; }
+    .modal-dialog .modal-content .modal-footer {
+      justify-content: center;
+      padding-top: 20px; }
+    .modal-dialog .modal-content .modal-separator {
+      width: 100px;
+      display: flex;
+      align-self: center;
+      border-bottom: 1px solid #95989A; }
 
 .tooltip {
   position: absolute;

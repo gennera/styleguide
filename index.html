@@ -328,6 +328,94 @@
           </pre>
         </div>
       </section>
+      <section id="modal">
+        <h2>Modals</h2>
+        <div class="code-example">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+            Launch demo modal
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h2 class="modal-title">Modal title</h2>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-separator"></div>
+                <div class="modal-body">
+                  <form name="myForm">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Nome da disciplina</label>
+                                <input class="form-control" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Carga horária</label>
+                                <input class="form-control" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Pré-requisito</label>
+                                <input class="form-control" type="text"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="code-highlight">
+          <pre>
+            <code class="html">
+              &lt;!-- Button trigger modal --&gt;
+              &lt;button type="button" class="btn btn-primary"&gt;
+                Launch demo modal
+              &lt;/button&gt;
+
+              &lt;!-- Modal --&gt;
+              &lt;div class="modal fade" tabindex="-1" role="dialog"&gt;
+                &lt;div class="modal-dialog modal-lg" role="document"&gt;
+                  &lt;div class="modal-content"&gt;
+                    &lt;div class="modal-header"&gt;
+                      &lt;h2 class="modal-title"&gt;Modal title&lt;/h2&gt;
+                      &lt;button type="button" class="close"&gt;
+                        &lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;
+                      &lt;/button&gt;
+                    &lt;/div&gt;
+                    &lt;div class="modal-separator"&gt;&lt;/div&gt;
+                    &lt;div class="modal-body"&gt;
+                      ...
+                    &lt;/div&gt;
+                    &lt;div class="modal-footer"&gt;
+                      &lt;button type="button" class="btn btn-secondary"&gt;Close&lt;/button&gt;
+                      &lt;button type="button" class="btn btn-primary"&gt;Save&lt;/button&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </pre>
+        </div>
+      </section>
       <section id="form">
         <h2>Forms</h2>
         <div class="code-example">
@@ -596,6 +684,7 @@
         </div>
       </section>
     </div>
+
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js" charset="UTF-8"></script>
     <script type="text/javascript" src="bower_components/tether/dist/js/tether.min.js" charset="UTF-8"></script>
