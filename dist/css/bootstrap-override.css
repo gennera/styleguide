@@ -3949,6 +3949,17 @@ button.close {
       align-self: center;
       border-bottom: 1px solid #95989A; }
 
+.fade.in {
+  opacity: 1; }
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+.modal-backdrop.in {
+  opacity: 1; }
+
 .tooltip {
   position: absolute;
   z-index: 1070;
