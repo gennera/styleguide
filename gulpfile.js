@@ -12,6 +12,7 @@ const gulpif = require('gulp-if');
 
 let ROOT = process.cwd();
 let CUSTOM_BOOTSTRAP_VARIABLES = '';
+let CUSTOM_BOOTSTRAP_SCSS = '';
 
 // ----------------------------------------
 // Tasks
@@ -44,18 +45,24 @@ gulp.task('override:material-design', () => {
 gulp.task('override:bootstrap', () => {
   const scss = `${ROOT}/scss/overrides/bootstrap`;
 
-  let custom = `@import "custom";`;
+  let customVariables = `@import "custom";`;
+  let customScss = '';
 
   if (CUSTOM_BOOTSTRAP_VARIABLES)
-    custom += `\n@import "${CUSTOM_BOOTSTRAP_VARIABLES}";`;
-  custom += `\n@import "${scss}/custom.scss";`;
+    customVariables += `\n@import "${CUSTOM_BOOTSTRAP_VARIABLES}";`;
+  customVariables += `\n@import "${scss}/custom.scss";`;
+
+  if (CUSTOM_BOOTSTRAP_SCSS) {
+    customScss = `\n@import "${CUSTOM_BOOTSTRAP_SCSS}";`;
+  }
 
   return gulp.src(`${ROOT}/bower_components/bootstrap/scss/bootstrap.scss`)
-    .pipe(replace(/@import "custom";/, custom))
+    .pipe(replace(/@import "custom";/, customVariables))
     .pipe(replace(/@import "buttons";/, `@import "buttons";\n@import "${scss}/buttons.scss";`))
     .pipe(replace(/@import "forms";/, `@import "forms";\n@import "${scss}/forms.scss";`))
     .pipe(replace(/@import "card";/, `@import "card";\n@import "${scss}/card.scss";`))
     .pipe(replace(/@import "modal";/, `@import "modal";\n@import "${scss}/modal.scss";`))
+    .pipe(replace(/@import "utilities";/, `@import "utilities";\n${customScss}`))
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('bootstrap-override.css'))
     .pipe(gulp.dest(`${ROOT}/css`));
@@ -108,7 +115,8 @@ gulp.task('install', () => {
 // Exporting task to use inside another gulpfile, like a dependency...
 module.exports = options => {
   ROOT = options.styleguidePath;
-  CUSTOM_BOOTSTRAP_VARIABLES = options.bootstrap;
+  CUSTOM_BOOTSTRAP_VARIABLES = options.bootstrapVariables;
+  CUSTOM_BOOTSTRAP_SCSS = options.bootstrap;
 
   options.gulp.task('styleguide:install', () => gulp.start('install'));
   options.gulp.task('styleguide:build', () => gulp.start('dist'));
