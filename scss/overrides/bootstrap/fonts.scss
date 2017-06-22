@@ -8,6 +8,10 @@
 @include addFont('Raleway', '../fonts/Raleway/Raleway-SemiBoldItalic.ttf', 'truetype', 500, italic);
 @include addFont('Raleway', '../fonts/Raleway/Raleway-Bold.ttf', 'truetype', 700, bold);
 @include addFont('Raleway', '../fonts/Raleway/Raleway-BoldItalic.ttf', 'truetype', 700, italic);
+@include addFont('Raleway', '../fonts/Raleway/Raleway-ExtraBold.ttf', 'truetype', 800, bold);
+@include addFont('Raleway', '../fonts/Raleway/Raleway-ExtraBoldItalic.ttf', 'truetype', 800, italic);
+@include addFont('Raleway', '../fonts/Raleway/Raleway-Black.ttf', 'truetype', 900, bold);
+@include addFont('Raleway', '../fonts/Raleway/Raleway-BlackItalic.ttf', 'truetype', 900, italic);
 
 // Source Sans Pro
 @include addFont('Source Sans Pro', '../fonts/Source_Sans_Pro/SourceSansPro-Light.ttf', 'truetype', 300, normal);
