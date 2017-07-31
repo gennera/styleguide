@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const gulp = require('gulp');
 const install = require('gulp-install');
 const clean = require('gulp-clean');
@@ -14,6 +15,10 @@ let ROOT = process.cwd();
 let CUSTOM_BOOTSTRAP_VARIABLES = '';
 let CUSTOM_BOOTSTRAP_SCSS = '';
 
+const join = function (a, b) {
+  return path.join(a, b);
+};
+
 // ----------------------------------------
 // Tasks
 // ----------------------------------------
@@ -26,71 +31,71 @@ const tasks = {
   }
 };
 
-gulp.task('copy:css', () => tasks.copy(`${ROOT}/css/*-override.css`, `${ROOT}/dist/css`));
-gulp.task('copy:fonts', () => tasks.copy(`${ROOT}/fonts/**/*.ttf`, `${ROOT}/dist/fonts`));
-gulp.task('copy:images', () => tasks.copy(`${ROOT}/images/*`, `${ROOT}/dist/images`));
+gulp.task('copy:css', () => tasks.copy(join(ROOT, '/css/*-override.css'), join(ROOT, '/dist/css')));
+gulp.task('copy:fonts', () => tasks.copy(join(ROOT, '/fonts/**/*.ttf'), join(ROOT, '/dist/fonts')));
+gulp.task('copy:images', () => tasks.copy(join(ROOT, '/images/*'), join(ROOT, '/dist/images')));
 
 gulp.task('clean', () => {
-  return gulp.src(`${ROOT}/dist`, { read: false })
+  return gulp.src(join(ROOT, `/dist`), { read: false })
     .pipe(clean({force: true}));
 });
 
 gulp.task('override:material-design', () => {
-  return gulp.src(`${ROOT}/scss/overrides/material-design/material-design.scss`)
+  return gulp.src(join(ROOT, `/scss/overrides/material-design/material-design.scss`))
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('material-design-override.css'))
-    .pipe(gulp.dest(`${ROOT}/css`));
+    .pipe(gulp.dest(join(ROOT, `/css`)));
 });
 
 gulp.task('override:bootstrap', () => {
-  const scss = `${ROOT}/scss/overrides/bootstrap`;
+  const scss = join(ROOT, `/scss/overrides/bootstrap`);
 
   let customVariables = `@import "custom";`;
   let customScss = '';
 
   if (CUSTOM_BOOTSTRAP_VARIABLES)
     customVariables += `\n@import "${CUSTOM_BOOTSTRAP_VARIABLES}";`;
-  customVariables += `\n@import "${scss}/custom.scss";`;
+  customVariables += `\n@import "${join(scss, '/custom.scss')}";`;
 
   if (CUSTOM_BOOTSTRAP_SCSS) {
     customScss = `\n@import "${CUSTOM_BOOTSTRAP_SCSS}";`;
   }
 
-  return gulp.src(`${ROOT}/bower_components/bootstrap/scss/bootstrap.scss`)
+  return gulp.src(join(ROOT, `/bower_components/bootstrap/scss/bootstrap.scss`))
     .pipe(replace(/@import "custom";/, customVariables))
-    .pipe(replace(/@import "buttons";/, `@import "buttons";\n@import "${scss}/buttons.scss";`))
-    .pipe(replace(/@import "forms";/, `@import "forms";\n@import "${scss}/forms.scss";`))
-    .pipe(replace(/@import "card";/, `@import "card";\n@import "${scss}/card.scss";`))
-    .pipe(replace(/@import "modal";/, `@import "modal";\n@import "${scss}/modal.scss";`))
+    .pipe(replace(/@import "buttons";/, `@import "buttons";\n@import "${join(scss, '/buttons.scss')}";`))
+    .pipe(replace(/@import "forms";/, `@import "forms";\n@import "${join(scss, '/forms.scss')}";`))
+    .pipe(replace(/@import "card";/, `@import "card";\n@import "${join(scss, '/card.scss')}";`))
+    .pipe(replace(/@import "modal";/, `@import "modal";\n@import "${join(scss, '/modal.scss')}";`))
     .pipe(replace(/@import "utilities";/, `@import "utilities";\n${customScss}`))
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('bootstrap-override.css'))
-    .pipe(gulp.dest(`${ROOT}/css`));
+    .pipe(gulp.dest(join(ROOT, `/css`)));
 });
 
 gulp.task('override:min', () => {
   return gulp.src([
-    `${ROOT}/css/bootstrap-override.css`,
-    `${ROOT}/css/material-design-override.css`
+    join(ROOT, `/css/bootstrap-override.css`),
+    join(ROOT, `/css/material-design-override.css`)
   ])
   .pipe(cleanCSS())
   .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest(`${ROOT}/dist/css`))
+  .pipe(gulp.dest(join(ROOT, `/dist/css`)))
   .on('error', console.error);
 });
 
 gulp.task('sass', () => {
-  return gulp.src(`${ROOT}/scss/style.scss`)
+  return gulp.src(join(ROOT, `/scss/style.scss`))
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(`${ROOT}/css`))
+    .pipe(gulp.dest(join(ROOT, `/css`)))
     .on('error', console.log);
 });
 
 gulp.task('sass:watch', () => {
   gulp.watch([
-    `${ROOT}/scss/**/*.scss`,
-    `${ROOT}/scss/overrides/bootstrap/**/*.scss`,
-    `${ROOT}/scss/overrides/material-design/**/*.scss`
+    join(ROOT, `/scss/**/*.scss`),
+    join(ROOT, `/scss/overrides/bootstrap/**/*.scss`),
+    join(ROOT, `/scss/overrides/material-design/**/*.scss`)
   ], ['sass']);
 });
 
@@ -108,7 +113,7 @@ gulp.task('dist', () => {
 });
 
 gulp.task('install', () => {
-  gulp.src([`${ROOT}/bower.json`, `${ROOT}/package.json`])
+  gulp.src([join(ROOT, '/bower.json'), join(ROOT, '/package.json')])
     .pipe(install());
 });
 
