@@ -68,6 +68,7 @@ gulp.task('override:bootstrap', () => {
     .pipe(replace(/@import "card";/, `@import "card";\n@import "${join(scss, '/card.scss')}";`))
     .pipe(replace(/@import "modal";/, `@import "modal";\n@import "${join(scss, '/modal.scss')}";`))
     .pipe(replace(/@import "utilities";/, `@import "utilities";\n${customScss}`))
+    .pipe(replace(/\\/g, `\\\\`))
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('bootstrap-override.css'))
     .pipe(gulp.dest(join(ROOT, `/css`)));
