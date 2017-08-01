@@ -47,6 +47,30 @@
   font-style: italic; }
 
 @font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: bold; }
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: bold; }
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway/Raleway-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic; }
+
+@font-face {
   font-family: "Source Sans Pro";
   src: url("../fonts/Source_Sans_Pro/SourceSansPro-Light.ttf") format("truetype");
   font-weight: 300;
@@ -1933,7 +1957,7 @@ label.form-control-file-custom {
   vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
-  padding: 0.5rem 3.75rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 2.25rem;
   transition: all 0.2s ease-in-out; }
@@ -2435,8 +2459,8 @@ tbody.collapse.show {
   outline: 0; }
 
 .btn + .dropdown-toggle-split {
-  padding-right: 2.8125rem;
-  padding-left: 2.8125rem; }
+  padding-right: 0.75rem;
+  padding-left: 0.75rem; }
   .btn + .dropdown-toggle-split::after {
     margin-left: 0; }
 
