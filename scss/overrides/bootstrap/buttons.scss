@@ -1,9 +1,17 @@
 .btn {
-  i.fa {
-    font-size: 14px;
-  }
-}
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
 
-.btn-icon {
-  padding: .5rem;
+  &.btn-icon {
+    padding: .5rem;
+
+    // FIXME: OVERRIDE FONT-AWESOME
+    .fa.fa-fw{
+      height: (18em / 14);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

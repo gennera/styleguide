@@ -2257,11 +2257,19 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%; }
 
-.btn i.fa {
-  font-size: 14px; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer; }
 
 .btn-icon {
   padding: .5rem; }
+
+.fa.fa-fw {
+  height: 1.28571em;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .fade {
   opacity: 0;
@@ -3303,84 +3311,6 @@ tbody.collapse.show {
       display: inline-block;
       width: 100%;
       margin-bottom: 0.75rem; } }
-
-.card.academic-card {
-  flex-direction: row;
-  min-height: 200px;
-  margin-bottom: 30px; }
-  .card.academic-card .title {
-    padding: 0; }
-  .card.academic-card > .info-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex: 0.3;
-    padding: 35px;
-    border-top-left-radius: 0.37rem;
-    border-bottom-left-radius: 0.37rem;
-    border-right: 1px solid #E8E8E8;
-    background-color: #FBFBFB;
-    cursor: pointer; }
-    .card.academic-card > .info-section > span.title {
-      text-align: left;
-      font-family: "Raleway";
-      font-weight: bold;
-      color: #292b2c; }
-    .card.academic-card > .info-section > div.indicators {
-      display: flex; }
-      .card.academic-card > .info-section > div.indicators > div.indicator {
-        display: flex;
-        flex-direction: column-reverse; }
-        .card.academic-card > .info-section > div.indicators > div.indicator > .title {
-          color: #9C9FAF; }
-        .card.academic-card > .info-section > div.indicators > div.indicator > .value {
-          font-family: "Raleway";
-          font-weight: bold;
-          font-size: 1.87rem;
-          color: #0275d8; }
-      .card.academic-card > .info-section > div.indicators > div.separator {
-        height: 50px;
-        margin: 0 15px;
-        align-self: center;
-        border-left: 1px solid #636c72; }
-  .card.academic-card > .detail-section {
-    display: flex;
-    flex-direction: column;
-    flex: 0.7;
-    border-top-right-radius: 0.37rem;
-    border-bottom-right-radius: 0.37rem;
-    background-color: #FFFFFF; }
-    .card.academic-card > .detail-section > div.actionbar {
-      display: flex;
-      justify-content: flex-end;
-      padding: 0px 10px;
-      border-bottom: 1px solid #E8E8E8;
-      color: #737784; }
-      .card.academic-card > .detail-section > div.actionbar > i {
-        padding: 10px 5px; }
-        .card.academic-card > .detail-section > div.actionbar > i:hover {
-          cursor: pointer; }
-    .card.academic-card > .detail-section > div.detail {
-      display: flex;
-      flex: 1;
-      font-size: 0.9375rem;
-      color: #9C9FAF; }
-      .card.academic-card > .detail-section > div.detail .no-data {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 1;
-        padding: 35px; }
-        .card.academic-card > .detail-section > div.detail .no-data i {
-          color: #E8E8E8; }
-      .card.academic-card > .detail-section > div.detail .detail-container {
-        flex: 1;
-        padding: 20px; }
-        .card.academic-card > .detail-section > div.detail .detail-container span.address {
-          font-size: 14px;
-          font-weight: 300;
-          color: #9C9FAF; }
 
 .breadcrumb {
   padding: 0.75rem 1rem;
