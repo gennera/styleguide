@@ -1855,12 +1855,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   border-color: #636c72; }
 
 select.form-control {
-  color: #fff;
-  background-color: #A3AFBA;
-  border-color: #A3AFBA; }
+  background-color: #fff; }
   select.form-control:focus {
-    color: #fff;
-    background-color: #0275d8;
+    background-color: #fff;
     border-color: #0275d8; }
   select.form-control:disabled {
     color: #AAB0B5;

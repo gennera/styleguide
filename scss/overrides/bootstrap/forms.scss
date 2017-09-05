@@ -14,13 +14,15 @@ $custom-input-file-height: 40px;
 // Select option
 // ------------------------------------
 select.form-control {
-  color: $white;
-  background-color: #A3AFBA;
-  border-color: #A3AFBA;
+  // color: $white;
+  // background-color: #A3AFBA;
+  background-color: $white;
+  // border-color: #A3AFBA;
 
   &:focus {
-    color: $white;
-    background-color: $brand-primary;
+    // color: $white;
+    background-color: $white;
+    // background-color: $brand-primary;
     border-color: $brand-primary;
   }
 
