@@ -543,14 +543,16 @@ a:not([href]):not([tabindex]) {
     outline: 0; }
 
 a.btn {
-  font-family: sans-serif; }
-  a.btn:not([href]):not([tabindex]) {
+  color: #fff;
+  font-family: sans-serif;
+  text-decoration: none; }
+  a.btn, a.btn:not([href]):not([tabindex]) {
     color: #fff;
     text-decoration: none; }
-    a.btn:not([href]):not([tabindex]):focus, a.btn:not([href]):not([tabindex]):hover {
+    a.btn:focus, a.btn:hover, a.btn:not([href]):not([tabindex]):focus, a.btn:not([href]):not([tabindex]):hover {
       color: #fff;
       text-decoration: none; }
-    a.btn:not([href]):not([tabindex]):focus {
+    a.btn:focus, a.btn:not([href]):not([tabindex]):focus {
       outline: 0; }
 
 h1, h2, h3, h4, h5, h6,

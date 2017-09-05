@@ -15,8 +15,11 @@ a:not([href]):not([tabindex]) {
 }
 
 a.btn {
+  color: $white;
   font-family: sans-serif;
+  text-decoration: none;
 
+  &,
   &:not([href]):not([tabindex]) {
     color: $white;
     text-decoration: none;
