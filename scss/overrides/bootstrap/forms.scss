@@ -45,6 +45,7 @@ input[type='checkbox'] {
   margin-right: 5px;
   margin-bottom: -2px;
   border: 1px solid $brand-primary;
+  cursor: pointer;
 
   &:before {
     content: '';

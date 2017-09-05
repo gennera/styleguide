@@ -1894,7 +1894,8 @@ input[type='checkbox'] {
   height: 16px;
   margin-right: 5px;
   margin-bottom: -2px;
-  border: 1px solid #0275d8; }
+  border: 1px solid #0275d8;
+  cursor: pointer; }
   input[type='radio']:before,
   input[type='checkbox']:before {
     content: '';
@@ -2282,6 +2283,7 @@ input[type="button"].btn-block {
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer; }
   .btn.btn-icon {
     padding: .5rem; }
