@@ -530,6 +530,9 @@ output {
 [hidden] {
   display: none !important; }
 
+a {
+  cursor: pointer; }
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
@@ -2261,15 +2264,13 @@ input[type="button"].btn-block {
   display: inline-flex;
   align-items: center;
   cursor: pointer; }
-
-.btn-icon {
-  padding: .5rem; }
-
-.fa.fa-fw {
-  height: 1.28571em;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  .btn.btn-icon {
+    padding: .5rem; }
+    .btn.btn-icon .fa.fa-fw {
+      height: 1.28571em;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
 
 .fade {
   opacity: 0;

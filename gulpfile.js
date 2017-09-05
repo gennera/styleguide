@@ -63,6 +63,7 @@ gulp.task('override:bootstrap', () => {
 
   return gulp.src(join(ROOT, `/bower_components/bootstrap/scss/bootstrap.scss`))
     .pipe(replace(/@import "custom";/, customVariables))
+    .pipe(replace(/@import "reboot";/, `@import "reboot";\n@import "${join(scss, '/reboot.scss')}";`))
     .pipe(replace(/@import "buttons";/, `@import "buttons";\n@import "${join(scss, '/buttons.scss')}";`))
     .pipe(replace(/@import "forms";/, `@import "forms";\n@import "${join(scss, '/forms.scss')}";`))
     .pipe(replace(/@import "card";/, `@import "card";\n@import "${join(scss, '/card.scss')}";`))
