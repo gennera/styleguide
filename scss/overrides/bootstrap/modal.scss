@@ -1,60 +1,60 @@
-$modal-close-button-size: 38px;
+// $modal-close-button-size: 38px;
 
-.modal-dialog {
-  margin-top: 120px;
+// .modal-dialog {
+//   margin-top: 120px;
 
-  .modal-content {
-    border-top: none;
-    border-bottom: none;
-    border-radius: 0;
+//   .modal-content {
+//     border-top: none;
+//     border-bottom: none;
+//     border-radius: 0;
 
-    .modal-header {
-      .modal-title { color: $gray-dark; }
+//     .modal-header {
+//       .modal-title { color: $gray-dark; }
 
-      &:before {
-        content: '';
-        width: $modal-close-button-size;
-      }
+//       &:before {
+//         content: '';
+//         width: $modal-close-button-size;
+//       }
 
-      button.close {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: $modal-close-button-size;
-        width: $modal-close-button-size;
-        font-weight: 100;
-        font-size: 20px;
-        border: 1px solid #A3AFBA;
-        border-radius: 50%;
-      }
-    }
+//       button.close {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         height: $modal-close-button-size;
+//         width: $modal-close-button-size;
+//         font-weight: 100;
+//         font-size: 20px;
+//         border: 1px solid #A3AFBA;
+//         border-radius: 50%;
+//       }
+//     }
 
-    .modal-footer {
-      justify-content: center;
-      padding-top: 20px;
-    }
+//     .modal-footer {
+//       justify-content: center;
+//       padding-top: 20px;
+//     }
 
-    .modal-separator {
-      width: 100px;
-      display: flex;
-      align-self: center;
-      border-bottom: 1px solid #95989A;
-    }
-  }
-}
+//     .modal-separator {
+//       width: 100px;
+//       display: flex;
+//       align-self: center;
+//       border-bottom: 1px solid #95989A;
+//     }
+//   }
+// }
 
-// Bootstrap 4 hackfix
-.fade.in {
-  opacity: 1;
-}
+// // Bootstrap 4 hackfix
+// .fade.in {
+//   opacity: 1;
+// }
 
-.modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-      transform: translate(0, 0);
-}
+// .modal.in .modal-dialog {
+//   -webkit-transform: translate(0, 0);
+//     -o-transform: translate(0, 0);
+//       transform: translate(0, 0);
+// }
 
-.modal-backdrop.in {
-  opacity: 1;
-}
-// Bootstrap 4 hackfix
+// .modal-backdrop.in {
+//   opacity: 1;
+// }
+// // Bootstrap 4 hackfix
