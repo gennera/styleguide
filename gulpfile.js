@@ -50,30 +50,29 @@ gulp.task('override:material-design', () => {
 gulp.task('override:bootstrap', () => {
   const scss = join(ROOT, `/scss/overrides/bootstrap`);
 
-  let customVariables = `@import "custom";`;
-  let customScss = '';
-
+  let customVariables = `@import "variables";`;
   if (CUSTOM_BOOTSTRAP_VARIABLES)
     customVariables += `\n@import "${CUSTOM_BOOTSTRAP_VARIABLES}";`;
   customVariables += `\n@import "${join(scss, '/custom.scss')}";`;
 
-  if (CUSTOM_BOOTSTRAP_SCSS) {
-    customScss = `\n@import "${CUSTOM_BOOTSTRAP_SCSS}";`;
-  }
-
-  return gulp.src(join(ROOT, `/bower_components/bootstrap/scss/bootstrap.scss`))
-    .pipe(replace(/@import "custom";/, customVariables))
-    .pipe(replace(/@import "reboot";/, `@import "reboot";\n@import "${join(scss, '/reboot.scss')}";`))
-    .pipe(replace(/@import "buttons";/, `@import "buttons";\n@import "${join(scss, '/buttons.scss')}";`))
-    .pipe(replace(/@import "forms";/, `@import "forms";\n@import "${join(scss, '/forms.scss')}";`))
-    .pipe(replace(/@import "card";/, `@import "card";\n@import "${join(scss, '/card.scss')}";`))
-    .pipe(replace(/@import "modal";/, `@import "modal";\n@import "${join(scss, '/modal.scss')}";`))
-    .pipe(replace(/@import "utilities";/, `@import "utilities";\n${customScss}`))
+  return gulp.src(join(ROOT, `/node_modules/bootstrap/scss/bootstrap.scss`))
+    .pipe(replace(/@import "variables";/, `${customVariables}`))
+    .pipe(gulpif(!!CUSTOM_BOOTSTRAP_SCSS, replaceImport('utilities', CUSTOM_BOOTSTRAP_SCSS)))
+    .pipe(replaceImport('reboot', '/reboot.scss', scss))
+    .pipe(replaceImport('buttons', '/buttons.scss', scss))
+    .pipe(replaceImport('forms', '/forms.scss', scss))
+    .pipe(replaceImport('card', '/card.scss', scss))
+    .pipe(replaceImport('modal', '/modal.scss', scss))
     .pipe(replace(/\\/g, `\\\\`))
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('bootstrap-override.css'))
     .pipe(gulp.dest(join(ROOT, `/css`)));
 });
+
+const replaceImport = (existentFileName, newFile, path) => {
+  const newFilePath = path ? join(path, newFile) : newFile;
+  return replace(new RegExp(`@import "${existentFileName}";`), `@import "${existentFileName}";\n@import "${newFilePath}";`);
+};
 
 gulp.task('override:min', () => {
   return gulp.src([
@@ -115,7 +114,7 @@ gulp.task('dist', () => {
 });
 
 gulp.task('install', () => {
-  gulp.src([join(ROOT, '/bower.json'), join(ROOT, '/package.json')])
+  gulp.src(join(ROOT, '/package.json'))
     .pipe(install());
 });
 
