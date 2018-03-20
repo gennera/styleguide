@@ -51,8 +51,8 @@ gulp.task('override:bootstrap', () => {
   const SCSS = join(ROOT, '/scss/overrides/bootstrap');
   return gulp.src(join(ROOT, '/node_modules/bootstrap/scss/bootstrap.scss'))
     .pipe(gulpif(!!CUSTOM_BOOTSTRAP_SCSS, replaceImport('utilities', CUSTOM_BOOTSTRAP_SCSS)))
-    .pipe(gulpif(!!CUSTOM_BOOTSTRAP_VARIABLES, replaceImport('variables', CUSTOM_BOOTSTRAP_VARIABLES)))
-    .pipe(replaceImport('variables', '/custom.scss', SCSS))
+    .pipe(replaceImport('custom', '/custom.scss', SCSS))
+    .pipe(gulpif(!!CUSTOM_BOOTSTRAP_VARIABLES, replaceImport('custom', CUSTOM_BOOTSTRAP_VARIABLES)))
     .pipe(replaceImport('reboot', '/reboot.scss', SCSS))
     .pipe(replaceImport('buttons', '/buttons.scss', SCSS))
     .pipe(replaceImport('forms', '/forms.scss', SCSS))
