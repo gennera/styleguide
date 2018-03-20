@@ -1,15 +1,26 @@
 {
   "name": "genneraapps-styleguide",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gennera/styleguide.git"
+  },
   "author": "Fernando Machado Bernardino <fernandombernardino@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "highlight.js": "9.10.0"
+    "angular": "1.6.5",
+    "bootstrap": "4.0.0",
+    "font-awesome": "4.7.0",
+    "highlight.js": "9.10.0",
+    "jquery": "3.3.1",
+    "material-design-icons": "3.0.1",
+    "normalize.css": "8.0.0",
+    "popper.js": "1.14.1"
   },
   "devDependencies": {
     "gulp": "3.9.1",

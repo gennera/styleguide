@@ -12,12 +12,6 @@ npm install --save-dev gulp
 }
 ```
 
-### 3 - Install Bower dependencies
-##### PS: This command will install automatically 'jquery, font-awesome, material-design-icons and bootstrap', like a dependency.
-```sh
-bower install
-```
-
 ### 4 - Import HTML dependencies
 ##### Note, Isn't necessary import default bootstrap, because the override is a new 'build' of bootstrap
 ```html
