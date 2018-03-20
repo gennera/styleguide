@@ -48,25 +48,20 @@ gulp.task('override:material-design', () => {
 });
 
 gulp.task('override:bootstrap', () => {
-  const scss = join(ROOT, `/scss/overrides/bootstrap`);
-
-  let customVariables = `@import "variables";`;
-  if (CUSTOM_BOOTSTRAP_VARIABLES)
-    customVariables += `\n@import "${CUSTOM_BOOTSTRAP_VARIABLES}";`;
-  customVariables += `\n@import "${join(scss, '/custom.scss')}";`;
-
-  return gulp.src(join(ROOT, `/node_modules/bootstrap/scss/bootstrap.scss`))
-    .pipe(replace(/@import "variables";/, `${customVariables}`))
+  const SCSS = join(ROOT, '/scss/overrides/bootstrap');
+  return gulp.src(join(ROOT, '/node_modules/bootstrap/scss/bootstrap.scss'))
     .pipe(gulpif(!!CUSTOM_BOOTSTRAP_SCSS, replaceImport('utilities', CUSTOM_BOOTSTRAP_SCSS)))
-    .pipe(replaceImport('reboot', '/reboot.scss', scss))
-    .pipe(replaceImport('buttons', '/buttons.scss', scss))
-    .pipe(replaceImport('forms', '/forms.scss', scss))
-    .pipe(replaceImport('card', '/card.scss', scss))
-    .pipe(replaceImport('modal', '/modal.scss', scss))
-    .pipe(replace(/\\/g, `\\\\`))
+    .pipe(gulpif(!!CUSTOM_BOOTSTRAP_VARIABLES, replaceImport('variables', CUSTOM_BOOTSTRAP_VARIABLES)))
+    .pipe(replaceImport('variables', '/custom.scss', SCSS))
+    .pipe(replaceImport('reboot', '/reboot.scss', SCSS))
+    .pipe(replaceImport('buttons', '/buttons.scss', SCSS))
+    .pipe(replaceImport('forms', '/forms.scss', SCSS))
+    .pipe(replaceImport('card', '/card.scss', SCSS))
+    .pipe(replaceImport('modal', '/modal.scss', SCSS))
+    .pipe(replace(/\\/g, '\\\\'))
     .pipe(sass().on('error', sass.logError))
     .pipe(rename('bootstrap-override.css'))
-    .pipe(gulp.dest(join(ROOT, `/css`)));
+    .pipe(gulp.dest(join(ROOT, '/css')));
 });
 
 const replaceImport = (existentFileName, newFile, path) => {
