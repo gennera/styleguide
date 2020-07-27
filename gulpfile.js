@@ -8,7 +8,6 @@ const sass = require('gulp-sass');
 const replace = require('gulp-replace');
 const rename = require('gulp-rename');
 const cleanCSS = require('gulp-clean-css');
-const runSequence = require('run-sequence');
 const gulpif = require('gulp-if');
 
 let ROOT = process.cwd();
@@ -95,21 +94,10 @@ gulp.task('sass:watch', () => {
   ], ['sass']);
 });
 
-gulp.task('dist', () => {
-  runSequence(
-    'clean',
-    'sass',
-    'override:bootstrap',
-    'override:material-design',
-    'override:min',
-    'copy:css',
-    'copy:fonts',
-    'copy:images'
-  );
-});
+gulp.task('dist', gulp.series('clean', 'sass', 'override:bootstrap', 'override:material-design', 'override:min', 'copy:css', 'copy:fonts', 'copy:images'));
 
 gulp.task('install', () => {
-  gulp.src(join(ROOT, '/package.json'))
+  return gulp.src(join(ROOT, '/package.json'))
     .pipe(install());
 });
 
