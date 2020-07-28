@@ -107,6 +107,6 @@ module.exports = options => {
   CUSTOM_BOOTSTRAP_VARIABLES = options.bootstrapVariables;
   CUSTOM_BOOTSTRAP_SCSS = options.bootstrap;
 
-  options.gulp.task('styleguide:install', () => gulp.start('install'));
-  options.gulp.task('styleguide:build', () => gulp.start('dist'));
+  options.gulp.task('styleguide:install', () => gulp.series('install'));
+  options.gulp.task('styleguide:build', () => gulp.series('dist'));
 };
