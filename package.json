@@ -13,7 +13,7 @@
   "author": "Fernando Machado Bernardino <fernandombernardino@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "angular": "1.6.5",
+    "angular": "1.8.0",
     "bootstrap": "4.0.0-alpha.6",
     "font-awesome": "4.7.0",
     "highlight.js": "9.10.0",
